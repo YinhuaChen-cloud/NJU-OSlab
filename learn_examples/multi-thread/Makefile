@@ -1,12 +1,16 @@
+CC=gcc
 
 default:
 	@echo "do nothing"
 
 multi-hello:
-	gcc multi-hello.c -lpthread	&& ./a.out
+	$(CC) $@.c -lpthread	&& ./a.out
 
 shm-test:
-	gcc shm-test.c -lpthread	&& ./a.out
+	$(CC) $@.c -lpthread	&& ./a.out
+
+stack-probe:
+	$(CC) $@.c -lpthread	&& ./a.out
 
 clean:
 	rm -rf a.out *.o
