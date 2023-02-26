@@ -1,6 +1,6 @@
 CC=gcc
 
-EXAMPLES= multi-hello shm-test stack-probe
+EXAMPLES= multi-hello shm-test stack-probe alipay
 
 default:
 	@echo "do nothing"
