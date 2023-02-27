@@ -2,14 +2,19 @@ CC=gcc
 
 EXAMPLES= multi-hello shm-test stack-probe alipay
 
-default:
-	@echo "do nothing"
+TARGET=
 
-$(EXAMPLES): 
-	$(CC) $@.c -lpthread	&& ./a.out
+default:
+	@echo "Usage: make run TARGET=[the example you want to run]"
+
+%.out: %.c
+	$(CC) $*.c -lpthread -o $@
+
+run: $(addsuffix .out, $(TARGET))
+	@./$<
 
 clean:
-	rm -rf a.out *.o
+	rm -rf *.out *.o
 
 PHONY: clean
 
