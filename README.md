@@ -7,7 +7,7 @@ an OS written by myself
 * 适配 320x200, 640x480, 800x600 三种屏幕分辨率
 * 能够适配 32-bit/64-bit 平台
 * 兼容大小端
-* 可在 x86_64 和 x86_32 两个环境下运行
+* 可在 native, x86_64-qemu, x86-qemu 三个环境下运行
 
 支持的用户程序:
 * pstree
